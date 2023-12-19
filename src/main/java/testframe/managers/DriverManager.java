@@ -27,6 +27,7 @@ public class DriverManager {
             driver.quit();
             driver = null;
         }
+
     }
     private void initDriver() {
         System.setProperty(properties.getProperty("WEB_DRIVER"), properties.getProperty("WEB_DRIVER_PATH"));

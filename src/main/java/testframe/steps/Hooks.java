@@ -6,8 +6,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import testframe.managers.DriverManager;
+import testframe.managers.PageManager;
 
 import static  testframe.managers.DriverManager.getDriverManager;
+
 
 public class Hooks {
     final WebDriver driver= getDriverManager().getDriver();
@@ -25,7 +27,9 @@ public class Hooks {
         } catch ( Exception e) {
             e.printStackTrace();
         }
-       // DriverManager.getDriverManager().quitDriver();
+        DriverManager.getDriverManager().quitDriver();
+        PageManager.getPageManager().getNull();
+
     }
 
 }

@@ -8,7 +8,8 @@ public class PageManager {
 
     private StartPage startPage;
 
-    private Poisk createKomPage;
+    private Poisk poiskPage;
+
 
     private PageManager() {
     }
@@ -27,10 +28,14 @@ public class PageManager {
         return startPage;
     }
     public Poisk getPoisk() {
-        if (createKomPage == null) {
-            createKomPage = new Poisk();
+        if (poiskPage == null) {
+            poiskPage = new Poisk();
         }
-        return createKomPage;
+        return poiskPage;
+    }
+    public PageManager getNull(){
+        pageManager = null;
+        return pageManager;
     }
 
 
